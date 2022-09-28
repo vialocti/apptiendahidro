@@ -1,5 +1,6 @@
 import React from 'react'
 import {View, Text} from 'react-native'
+import { CardDetalle } from '../../components';
 import { products } from '../../constants/data/products';
 import {styles} from './styles'
 
@@ -10,13 +11,19 @@ const DetalleProducto = ({navigation,route}) => {
     const product = products.find(product => product.id === productId);
     
     return (
-        <View style={styles.container}>
-            <Text>id: {product.id}</Text>
-            <Text>{product.title}</Text>
+        <CardDetalle style={styles.container}>
+            
+            <Text style={styles.titleproducto}>{product.title}</Text>
+            <Text style={styles.subtitle}>Descripcion:</Text>
             <Text>{product.description}</Text>
-            <Text>${product.price}</Text>
-            <Text>weight: {product.weight}</Text>
-        </View>
+            <Text style={styles.subtitle}>Presentacion:</Text>
+            <Text>{product.dimcap}</Text>
+            <Text style={styles.subtitle}>Precio: ${product.price}</Text>
+            <Text stile={styles.linea}></Text>
+            <Text style={styles.titleimport}>Importante</Text>
+            <Text>Comprando mas de 10 productos descuentos del 5%</Text>
+            
+        </CardDetalle>
   )
 }
 
