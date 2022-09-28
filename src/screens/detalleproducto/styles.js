@@ -24,5 +24,21 @@ export const styles=StyleSheet.create({
         fontFamily:'Lato-Bold',
         fontSize:16,
         color:colors.import,
-    }
+    },
+    button: {
+        alignItems: "center",
+        backgroundColor: "#DDEEEE",
+        padding: 10,
+        marginBottom:5,
+        width:200,
+        borderWidth:2,
+        borderColor:'#AAFFAA',
+        borderRadius:15,
+      },
+    titleingreso:{
+        fontFamily:'Lato-Bold',
+        fontSize:20,
+        
+
+    },
 })

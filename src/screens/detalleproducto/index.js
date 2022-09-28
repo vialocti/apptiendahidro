@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text} from 'react-native'
+import {View, Text, TouchableOpacity} from 'react-native'
 import { CardDetalle } from '../../components';
 import { products } from '../../constants/data/products';
 import {styles} from './styles'
@@ -11,6 +11,7 @@ const DetalleProducto = ({navigation,route}) => {
     const product = products.find(product => product.id === productId);
     
     return (
+        <View style={styles.container}>
         <CardDetalle style={styles.container}>
             
             <Text style={styles.titleproducto}>{product.title}</Text>
@@ -24,6 +25,23 @@ const DetalleProducto = ({navigation,route}) => {
             <Text>Comprando mas de 10 productos descuentos del 5%</Text>
             
         </CardDetalle>
+
+        <TouchableOpacity
+                style={styles.button}
+                onPress={()=>{navigation.navigate('Categorias')}}
+            >
+            <Text style={styles.titleingreso}> Ir a Categorias </Text>
+            
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.button}
+                onPress={()=>{navigation.navigate('Inicio')}}
+            >
+            <Text style={styles.titleingreso}> Ir a Inicio </Text>
+            
+            </TouchableOpacity>
+        
+        </View>
   )
 }
 

@@ -1,14 +1,21 @@
 import React from 'react'
-import {View, Button} from 'react-native'
+import {Text,View, TouchableOpacity,Image} from 'react-native'
 import {styles} from './styles'
 
 const Inicio = ({navigation}) => {
   return (
     <View style={styles.container}>
-    <Button 
-        title='Ir a ...'
-        onPress={()=>{navigation.navigate('Categorias')}}
-    />
+    <Text style={styles.titlemain_1}>Proyecto O</Text>
+    <Text style={styles.titlemain}>Shop Hidroponia </Text>
+    <View >
+    <Image source={require('../../../assets/imageninicio.jpg')} style={styles.TamanioImage} />
+    </View>
+    <TouchableOpacity
+    style={styles.button}
+     onPress={()=>{navigation.navigate('Categorias')}}
+    >
+      <Text style={styles.titleingreso}> Ingresar </Text>
+    </TouchableOpacity>
 
 </View>
   )
