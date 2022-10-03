@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
         backgroundColor: "#fff",
     },
     footer: {
-        borderTopColor: colors.primary,
+        borderTopColor: colors.text,
         borderTopWidth: 1,
         paddingVertical: 10,
         marginBottom: 10,

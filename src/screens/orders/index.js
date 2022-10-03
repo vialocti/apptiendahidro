@@ -5,7 +5,7 @@ import { orders } from "../../constants/data";
 import { styles } from "./styles";
 
 const OrdersScreen = ({navigation}) => {
-    console.warn(orders)
+    
     const onCancel = (id) => {
         console.warn(id);
     }

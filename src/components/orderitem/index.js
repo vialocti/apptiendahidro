@@ -16,7 +16,9 @@ const OrderItem = ({ item, onCancel }) => {
                 <Text style={styles.date}>{formDate(item.date)}</Text>
             </View>
             <View style={styles.contentContainer}>
+
                 <View style={styles.content}>
+              
                     <Text style={styles.total}>${item.total}</Text>
                 </View>
             <TouchableOpacity onPress={() => onCancel(item.id)}>

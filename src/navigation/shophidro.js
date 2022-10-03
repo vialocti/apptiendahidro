@@ -1,6 +1,8 @@
 import React from 'react'
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import {Inicio, Categorias,Productos,DetalleProducto} from '../screens/index';
+import { isAndroid } from '../utils/functions';
+import { colors } from '../constants/themes';
 
 
 const Stack = createNativeStackNavigator();

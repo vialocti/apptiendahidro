@@ -29,7 +29,7 @@ const CartScreen = ({navigation}) => {
                     style={styles.buttonConfirm}
                     onPress={() => null}
                 >
-                    <Text style={styles.textButtonConfirm}>Confirm</Text>
+                    <Text style={styles.textButtonConfirm}>Confirmar</Text>
                     <View style={styles.totalContainer}>
                         <Text style={styles.totalTitle}>Total: </Text>
                         <Text style={styles.total}>${total}</Text>

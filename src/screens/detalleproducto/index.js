@@ -36,15 +36,7 @@ const DetalleProducto = ({navigation,route}) => {
             <TouchableOpacity
                 style={styles.button}
                 onPress={()=>{navigation.navigate('Inicio')}}
-            > screenOptions={{
-                headerStyle: {
-                    backgroundColor: isAndroid ? colors.primary : colors.secondary,
-                },
-                headerTintColor: colors.text,
-                headerTitleStyle: {
-                    fontFamily: 'Lato-Bold',
-                },
-            }}
+            > 
             <Text style={styles.titleingreso}> Ir a Inicio </Text>
             
             </TouchableOpacity>

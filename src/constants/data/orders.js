@@ -2,7 +2,7 @@ export const orders = [
     {
       id: 1,
       date: 1605898400000,
-      total: 10000,
+      total: 5750,
       items: [
         {
           id: 4,
@@ -35,8 +35,8 @@ export const orders = [
     },
     {
         id: 2,
-        date: 1705898400000,
-        total: 12000,
+        date: 1615898400000,
+        total: 3711,
         items: [
           {
             id: 7,
