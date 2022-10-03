@@ -1,11 +1,11 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
-import ShopHidro from './shophidro'
-
+//import ShopHidro from './shophidro'
+import Tabs from './tabs'
 const ShopNavigator = () => {
   return (
     <NavigationContainer>
-        <ShopHidro /> 
+        <Tabs /> 
     </NavigationContainer>
   )
 }

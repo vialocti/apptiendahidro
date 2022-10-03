@@ -9,6 +9,15 @@ const ShopHidro = () => {
   return (
     <Stack.Navigator
     initialRouteName="Inicio"
+    screenOptions={{
+        headerStyle: {
+            backgroundColor: isAndroid ? colors.primary : colors.secondary,
+        },
+        headerTintColor: colors.text,
+        headerTitleStyle: {
+            fontFamily: 'Lato-Bold',
+        },
+    }}
         >
         <Stack.Screen 
             name="Inicio"
@@ -27,16 +36,16 @@ const ShopHidro = () => {
         <Stack.Screen 
             name="Productos"
             component={Productos} 
-            options={{
-                title: 'Productos',
-            }}
+            options={({route})=>({
+                title: route.params.name,
+            })}
         />
         <Stack.Screen 
             name="DetalleProducto"
             component={DetalleProducto} 
-            options={{
-                title: 'Detalle Producto',
-            }}
+            options={({route})=>({
+                title: route.params.name,
+            })}
         />
     </Stack.Navigator>
   )

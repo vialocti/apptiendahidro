@@ -1,7 +1,7 @@
 import React from 'react'
 import {FlatList} from 'react-native'
 import { ProductoItem } from '../../components'
-import { products } from '../../constants/data/products'
+import { products } from '../../constants/data'
 import {styles} from './styles'
 
 const Productos = ({navigation,route}) => {
