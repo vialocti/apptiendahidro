@@ -1,24 +1,30 @@
 
-import { StyleSheet, View, ActivityIndicator } from 'react-native';
+import { StyleSheet,ActivityIndicator } from 'react-native';
 import { useFonts } from 'expo-font';
 import ShopNavigator from './src/navigation/index';
+import store from './src/store'
+import { Provider } from 'react-redux';
 
 export default function App() {
   
-  const [loaded] = useFonts({
-    'Lato-Regular': require('./assets/fonts/Lato-Regular.ttf'),
-    'Lato-Bold': require('./assets/fonts/Lato-Bold.ttf'),
-    'Lato-Light': require('./assets/fonts/Lato-Light.ttf'),
-  });
 
-  if(!loaded){
-    return <ActivityIndicator />;
-  }
+    const [loaded] = useFonts({
+      'Lato-Regular': require('./assets/fonts/Lato-Regular.ttf'),
+      'Lato-Bold': require('./assets/fonts/Lato-Bold.ttf'),
+      'Lato-Light': require('./assets/fonts/Lato-Light.ttf'),
+    });
+  
+    if (!loaded) {
+      return <ActivityIndicator />;
+    }
   return (
     
-    
-    <ShopNavigator/>
-  );
+    <Provider store={store}>
+  
+       <ShopNavigator/>
+   </Provider>
+  
+    );
 }
 
 const styles = StyleSheet.create({

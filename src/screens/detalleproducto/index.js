@@ -1,14 +1,14 @@
 import React from 'react'
 import {View, Text, TouchableOpacity} from 'react-native'
 import { CardDetalle } from '../../components';
-import { products } from '../../constants/data';
+//import { products } from '../../constants/data';
 import {styles} from './styles'
+import { useSelector } from 'react-redux';
 
-
-const DetalleProducto = ({navigation,route}) => {
-  
-    const { productId } = route.params;
-    const product = products.find(product => product.id === productId);
+const DetalleProducto = ({navigation}) => {
+     
+    const product = useSelector((state) => state.products.selected);
+    //const product = products.find(product => product.id === productId);
     
     return (
         <View style={styles.container}>
